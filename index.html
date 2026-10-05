@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>James Nathaniel Tan - Portfolio</title>
+    <title>James Nathaniel Tan | Information Systems Graduate</title>
+    <meta name="description" content="Portfolio of James Nathaniel Tan, Information Systems graduate focused on cloud, data analytics, and web development.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="assets/image.png" type="image/png">
     <style>
         * {
@@ -16,7 +20,7 @@
             --primary: #0f172a;
             --secondary: #3b82f6;
             --accent: #06b6d4;
-            --accent-light: #e7ffe9;
+            --accent-light: #eff6ff;
             --text-primary: #1e293b;
             --text-secondary: #64748b;
             --bg-primary: #ffffff;
@@ -62,8 +66,18 @@
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            letter-spacing: -0.01em;
+        }
+
+        nav a.logo::after {
+            display: none;
+        }
+
+        nav a.logo:hover {
             color: var(--primary);
         }
 
@@ -132,7 +146,7 @@
 
         /* Hero Section */
         .hero {
-            min-height: 100vh;
+            min-height: 85vh;
             display: flex;
             align-items: center;
             padding: 2rem 0;
@@ -143,28 +157,12 @@
             width: 100%;
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
-            top: -250px;
-            right: -250px;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(5deg); }
-        }
-
         .hero-content {
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 3rem;
+            grid-template-columns: 280px 1fr;
+            gap: 4rem;
             align-items: center;
             position: relative;
             z-index: 1;
@@ -188,33 +186,14 @@
             height: 100%;
             border-radius: 12px;
             object-fit: cover;
-            border: 6px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            border: 4px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 4rem;
             color: white;
-        }
-
-        .profile-glow {
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
-            background: linear-gradient(135deg, var(--secondary), var(--accent));
-            border-radius: 12px;
-            filter: blur(20px);
-            opacity: 0.4;
-            z-index: -1;
-            animation: pulse 3s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 0.4; transform: scale(1); }
-            50% { opacity: 0.6; transform: scale(1.05); }
         }
 
         .hero-text h1 {
@@ -278,44 +257,6 @@
             background: white;
             color: var(--primary);
         }
-
-        .hero-visual {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .code-box {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            padding: 2rem;
-            backdrop-filter: blur(10px);
-            font-family: 'Courier New', monospace;
-            color: #cbd5e1;
-            font-size: 0.9rem;
-            line-height: 1.8;
-        }
-
-        .code-line {
-            opacity: 0;
-            animation: fadeInCode 0.5s ease forwards;
-        }
-
-        .code-line:nth-child(1) { animation-delay: 0.2s; }
-        .code-line:nth-child(2) { animation-delay: 0.4s; }
-        .code-line:nth-child(3) { animation-delay: 0.6s; }
-        .code-line:nth-child(4) { animation-delay: 0.8s; }
-
-        @keyframes fadeInCode {
-            to {
-                opacity: 1;
-            }
-        }
-
-        .code-keyword { color: #f472b6; }
-        .code-string { color: #34d399; }
-        .code-function { color: #60a5fa; }
 
         /* Section Styles */
         section {
@@ -385,7 +326,7 @@
         }
 
         .stat-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-2px);
         }
 
         .stat-number {
@@ -446,8 +387,7 @@
         .skill-item:hover {
             border-color: var(--secondary);
             background: white;
-            transform: translateY(-3px);
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+            box-shadow: 0 2px 8px rgba(59, 130, 246, 0.15);
         }
 
         .skill-icon {
@@ -478,8 +418,8 @@
         }
 
         .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
         }
 
         .project-image-overlay {
@@ -645,41 +585,79 @@
 
         .certificates-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
         }
 
         .certificate-card {
             background: white;
             border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            text-align: center;
-            transition: all 0.3s ease;
+            padding: 1.5rem;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+            text-align: left;
+            transition: box-shadow 0.3s ease;
             border: 1px solid var(--border);
+            border-left: 4px solid var(--secondary);
         }
 
         .certificate-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
         }
 
-        .cert-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--secondary), var(--accent));
-            border-radius: 50%;
-            display: flex;
+        .certificates-grid:not(.expanded) .cert-extra {
+            display: none;
+        }
+
+        .cert-toggle-wrap {
+            text-align: center;
+            margin-top: 2.5rem;
+        }
+
+        .cert-toggle {
+            background: transparent;
+            color: var(--secondary);
+            border: 2px solid var(--secondary);
+            padding: 0.75rem 1.75rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .cert-toggle:hover {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .status-badge {
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 2rem;
+            gap: 0.5rem;
+            padding: 0.35rem 0.9rem;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.06);
+            color: #e2e8f0;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 1.25rem;
+        }
+
+        .status-badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #22c55e;
         }
 
         .certificate-card h3 {
-            font-size: 1.2rem;
+            font-size: 1.05rem;
             margin-bottom: 0.5rem;
             color: var(--primary);
+            line-height: 1.4;
         }
 
         .cert-issuer {
@@ -894,10 +872,6 @@
                 font-size: 3rem;
             }
 
-            .hero-visual {
-                display: none;
-            }
-
             .about-grid {
                 grid-template-columns: 1fr;
             }
@@ -984,7 +958,7 @@
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
-            <div class="logo">JNT</div>
+            <a href="#home" class="logo">James Nathaniel Tan</a>
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -1006,15 +980,13 @@
         <div class="hero-content">
             <div class="hero-image">
                 <div class="profile-image-container">
-                    <div class="profile-glow"></div>
-                    <div class="profile-image">
-                        <img src="assets/image.png" alt="James Nathaniel Tan" class="profile-image">
-                    </div>
+                    <img src="assets/image.png" alt="James Nathaniel Tan" class="profile-image">
                 </div>
             </div>
             <div class="hero-text">
+                <span class="status-badge">Open to opportunities</span>
                 <h1>James Nathaniel Tan</h1>
-                <p class="subtitle">Information Systems Student | Cloud & Data Enthusiast</p>
+                <p class="subtitle">Information Systems Graduate | Cloud & Data Enthusiast</p>
                 <p>Building innovative solutions through cloud architecture, data analytics, and modern web technologies. Passionate about transforming ideas into scalable digital experiences.</p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-primary">
@@ -1023,15 +995,6 @@
                     <a href="#projects" class="btn btn-outline">
                         <span>View Featured Projects</span>
                     </a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="code-box">
-                    <div class="code-line"><span class="code-keyword">const</span> developer = {</div>
-                    <div class="code-line">  name: <span class="code-string">"James Nathaniel"</span>,</div>
-                    <div class="code-line">  role: <span class="code-string">"IS Student"</span>,</div>
-                    <div class="code-line">  skills: [<span class="code-string">"AWS"</span>, <span class="code-string">"React"</span>, <span class="code-string">"Python"</span>]</div>
-                    <div class="code-line">}</div>
                 </div>
             </div>
         </div>
@@ -1047,7 +1010,7 @@
         <div class="about-grid">
             <div class="about-text">
                 <p>
-                    I'm an Information Systems student from Mapúa Malayan Colleges Mindanao with a strong passion for cloud computing, data analytics, and software development. My journey in tech has been driven by curiosity and a commitment to building meaningful, efficient, and scalable digital solutions.
+                    I'm an Information Systems graduate from Mapúa Malayan Colleges Mindanao with a strong passion for cloud computing, data analytics, and software development. My journey in tech has been driven by curiosity and a commitment to building meaningful, efficient, and scalable digital solutions.
                 </p>
                 <p>
                     Through various academic and personal projects, I've gained hands-on experience in AWS services, full-stack development, and data-driven systems. I enjoy working with modern tools and frameworks that bridge software, analytics, and cloud infrastructure.
@@ -1271,10 +1234,9 @@
             <p>Professional certifications and achievements</p>
         </div>
 
-        <div class="certificates-grid">
+        <div class="certificates-grid" id="certGrid">
             <!-- IBM -->
             <div class="certificate-card">
-                <div class="cert-icon">💼</div>
                 <h3>Introduction to Business Analysis</h3>
                 <p class="cert-issuer">IBM</p>
                 <p class="cert-date">Issued Oct 2025</p>
@@ -1283,7 +1245,6 @@
 
             <!-- HKUST -->
             <div class="certificate-card">
-                <div class="cert-icon">🧾</div>
                 <h3>Information Systems Auditing, Controls and Assurance</h3>
                 <p class="cert-issuer">The Hong Kong University of Science and Technology</p>
                 <p class="cert-date">Issued Sep 2025</p>
@@ -1292,7 +1253,6 @@
 
             <!-- AWS Architecting -->
             <div class="certificate-card">
-                <div class="cert-icon">☁️</div>
                 <h3>AWS Academy Graduate - AWS Academy Cloud Architecting</h3>
                 <p class="cert-issuer">Amazon Web Services (AWS)</p>
                 <p class="cert-date">Issued Mar 2025</p>
@@ -1300,7 +1260,6 @@
 
             <!-- AWS Cloud Practitioner Essentials -->
             <div class="certificate-card">
-                <div class="cert-icon">🏆</div>
                 <h3>AWS Cloud Practitioner Essentials</h3>
                 <p class="cert-issuer">Amazon Web Services</p>
                 <p class="cert-date">Issued Mar 2025</p>
@@ -1309,7 +1268,6 @@
 
             <!-- Politecnico di Milano -->
             <div class="certificate-card">
-                <div class="cert-icon">🎯</div>
                 <h3>Project Management: Beyond Planning and Control</h3>
                 <p class="cert-issuer">Politecnico di Milano</p>
                 <p class="cert-date">Issued Jan 2025</p>
@@ -1317,7 +1275,6 @@
             </div>
 
             <div class="certificate-card">
-                <div class="cert-icon">📋</div>
                 <h3>Project Management: Life Cycle and Project Planning</h3>
                 <p class="cert-issuer">Politecnico di Milano</p>
                 <p class="cert-date">Issued Jan 2025</p>
@@ -1326,7 +1283,6 @@
 
             <!-- AWS Foundations -->
             <div class="certificate-card">
-                <div class="cert-icon">⚙️</div>
                 <h3>AWS Academy Graduate - AWS Academy Cloud Foundations</h3>
                 <p class="cert-issuer">Amazon Web Services (AWS)</p>
                 <p class="cert-date">Issued Oct 2024</p>
@@ -1334,7 +1290,6 @@
 
             <!-- Coursera -->
             <div class="certificate-card">
-                <div class="cert-icon">📊</div>
                 <h3>Data Structures</h3>
                 <p class="cert-issuer">Coursera</p>
                 <p class="cert-date">Issued Oct 2023</p>
@@ -1343,28 +1298,24 @@
 
             <!-- LinkedIn -->
             <div class="certificate-card">
-                <div class="cert-icon">🔗</div>
                 <h3>Learning LinkedIn for Students</h3>
                 <p class="cert-issuer">LinkedIn</p>
                 <p class="cert-date">Issued Oct 2023</p>
             </div>
 
             <div class="certificate-card">
-                <div class="cert-icon">🧭</div>
                 <h3>Planning Your Career and Your Life</h3>
                 <p class="cert-issuer">LinkedIn</p>
                 <p class="cert-date">Issued Oct 2023</p>
             </div>
 
             <div class="certificate-card">
-                <div class="cert-icon">🗄️</div>
                 <h3>Programming Foundations: Databases</h3>
                 <p class="cert-issuer">LinkedIn</p>
                 <p class="cert-date">Issued Oct 2023</p>
             </div>
 
             <div class="certificate-card">
-                <div class="cert-icon">💾</div>
                 <h3>SQL Essential Training</h3>
                 <p class="cert-issuer">LinkedIn</p>
                 <p class="cert-date">Issued Oct 2023</p>
@@ -1372,7 +1323,6 @@
 
             <!-- Java -->
             <div class="certificate-card">
-                <div class="cert-icon">☕</div>
                 <h3>Introduction to Object-Oriented Programming with Java</h3>
                 <p class="cert-issuer">Coursera</p>
                 <p class="cert-date">Issued Sep 2023</p>
@@ -1380,7 +1330,6 @@
             </div>
 
             <div class="certificate-card">
-                <div class="cert-icon">💻</div>
                 <h3>Introduction to Java</h3>
                 <p class="cert-issuer">Coursera</p>
                 <p class="cert-date">Issued May 2023</p>
@@ -1389,21 +1338,18 @@
 
             <!-- Cybersecurity -->
             <div class="certificate-card">
-                <div class="cert-icon">🕵️</div>
                 <h3>Ethical Hacking: System Hacking</h3>
                 <p class="cert-issuer">LinkedIn</p>
                 <p class="cert-date">Issued Feb 2023</p>
             </div>
 
             <div class="certificate-card">
-                <div class="cert-icon">🔍</div>
                 <h3>Stealth Penetration Testing with Advanced Enumeration</h3>
                 <p class="cert-issuer">LinkedIn</p>
                 <p class="cert-date">Issued Feb 2023</p>
             </div>
 
             <div class="certificate-card">
-                <div class="cert-icon">🐍</div>
                 <h3>Programming for Everybody (Getting Started with Python)</h3>
                 <p class="cert-issuer">Coursera</p>
                 <p class="cert-date">Issued Feb 2023</p>
@@ -1411,56 +1357,48 @@
             </div>
 
             <div class="certificate-card">
-                <div class="cert-icon">📡</div>
                 <h3>Big Data in the Age of AI</h3>
                 <p class="cert-issuer">LinkedIn</p>
                 <p class="cert-date">Issued Jan 2023</p>
             </div>
 
             <div class="certificate-card">
-                <div class="cert-icon">💬</div>
                 <h3>Customer Service: Knowledge Management</h3>
                 <p class="cert-issuer">LinkedIn</p>
                 <p class="cert-date">Issued Jan 2023</p>
             </div>
 
             <div class="certificate-card">
-                <div class="cert-icon">📈</div>
                 <h3>Data Storytelling Basics</h3>
                 <p class="cert-issuer">LinkedIn</p>
                 <p class="cert-date">Issued Jan 2023</p>
             </div>
 
             <div class="certificate-card">
-                <div class="cert-icon">🛍️</div>
                 <h3>Ecommerce Fundamentals (2021)</h3>
                 <p class="cert-issuer">LinkedIn</p>
                 <p class="cert-date">Issued Jan 2023</p>
             </div>
 
             <div class="certificate-card">
-                <div class="cert-icon">☁️</div>
                 <h3>Learning Cloud Computing: Core Concepts</h3>
                 <p class="cert-issuer">LinkedIn</p>
                 <p class="cert-date">Issued Jan 2023</p>
             </div>
 
             <div class="certificate-card">
-                <div class="cert-icon">💻</div>
                 <h3>Working with Computers and Devices</h3>
                 <p class="cert-issuer">LinkedIn</p>
                 <p class="cert-date">Issued Nov 2022</p>
             </div>
 
             <div class="certificate-card">
-                <div class="cert-icon">🌐</div>
                 <h3>Introduction to Network Routing</h3>
                 <p class="cert-issuer">LinkedIn</p>
                 <p class="cert-date">Issued Sep 2022</p>
             </div>
 
             <div class="certificate-card">
-                <div class="cert-icon">🔗</div>
                 <h3>Networking Foundations: Local Area Networks (LANs)</h3>
                 <p class="cert-issuer">LinkedIn</p>
                 <p class="cert-date">Issued Sep 2022</p>
@@ -1468,11 +1406,13 @@
 
             <!-- Microsoft -->
             <div class="certificate-card">
-                <div class="cert-icon">📊</div>
                 <h3>Microsoft Office Specialist: Excel Associate (Office 2019)</h3>
                 <p class="cert-issuer">Microsoft</p>
                 <p class="cert-date">Issued Aug 2022</p>
             </div>
+        </div>
+        <div class="cert-toggle-wrap">
+            <button class="cert-toggle" id="certToggle" type="button"></button>
         </div>
     </section>
 
@@ -1488,7 +1428,7 @@
                 <div class="timeline-content">
                     <h3>Mapúa Malayan Colleges Mindanao</h3>
                     <p class="degree">Bachelor of Science in Information Systems</p>
-                    <p class="date">2022 - 2026</p>
+                    <p class="date">2022 - 2026 · Graduated September 2026</p>
                     <p class="degree">Senior High School</p>
                     <p class="date">2020 - 2022</p>
                 </div>
@@ -1514,15 +1454,20 @@
     <section id="contact">
         <div class="section-header">
             <h2>Get In Touch</h2>
-            <p>Let's connect and collaborate</p>
+            <p>Open to opportunities. Let's connect.</p>
         </div>
         <div class="contact-container">
             <div class="contact-grid">
                 <div class="contact-item">
-                    <div class="contact-icon">📧</div>
+                    <div class="contact-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="3" y="5" width="18" height="14" rx="2"/>
+                            <path d="M3 7l9 6 9-6"/>
+                        </svg>
+                    </div>
                     <div class="contact-info">
                         <h3>Email</h3>
-                        <a href="mailto:jntan@mcm.edu.ph">jntan@mcm.edu.ph</a>
+                        <a href="mailto:jntan012@gmail.com">jntan012@gmail.com</a>
                     </div>
                 </div>
                 <div class="contact-item">
@@ -1553,7 +1498,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>© 2025 James Nathaniel Tan | Built with passion and code</p>
+        <p>© 2026 James Nathaniel Tan</p>
     </footer>
 
     <script>
@@ -1696,9 +1641,29 @@
             fadeObserver.observe(element);
         });
 
+        // Certificates: show the most recent ones, expand for the rest
+        const certGrid = document.getElementById('certGrid');
+        const certCards = certGrid.querySelectorAll('.certificate-card');
+        const certToggle = document.getElementById('certToggle');
+        const CERT_VISIBLE = 8;
+
+        if (certCards.length > CERT_VISIBLE) {
+            certCards.forEach((card, i) => {
+                if (i >= CERT_VISIBLE) card.classList.add('cert-extra');
+            });
+            const collapsedLabel = `Show all ${certCards.length} certifications`;
+            certToggle.textContent = collapsedLabel;
+            certToggle.addEventListener('click', () => {
+                const expanded = certGrid.classList.toggle('expanded');
+                certToggle.textContent = expanded ? 'Show fewer' : collapsedLabel;
+            });
+        } else {
+            certToggle.parentElement.style.display = 'none';
+        }
+
         // Add current year to footer
         const currentYear = new Date().getFullYear();
-        document.querySelector('footer p').textContent = `© ${currentYear} James Nathaniel Tan | Built with passion and code`;
+        document.querySelector('footer p').textContent = `© ${currentYear} James Nathaniel Tan `;
 
         // Project image overlay functions
         function openImageOverlay(imageSrc) {
